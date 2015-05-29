@@ -1,11 +1,11 @@
 var expect = require('chai').expect
   , send = require('./')
   
-describe('all', function() {
+describe('send', function() {
 
-  it('should call res.sendfile with path', function(){
+  it('should call res.sendFile with path', function(){
     var fn = function(path){ result = path; }
-      , res = { sendfile: fn }
+      , res = { sendFile: fn }
       , result 
 
     send('sth')({}, res)
